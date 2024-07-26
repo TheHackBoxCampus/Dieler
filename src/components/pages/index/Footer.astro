@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+
+//assets
+import Ilustration from "@/assets/images/luz.png";
+import Logo from "@/assets/images/logo.png";
+---
+
+<section
+  class="relative rounded-t-3xl border-t border-[#FBF7FB] border-opacity-20 h-[250px] overflow-hidden"
+>
+  <div class="w-[70%] mx-auto my-16 flex justify-between">
+    <div id="logo" class="flex items-start gap-2">
+      <Image src={Logo} alt={"Logo de la empresa dieler"} class="mt-2" loading={"eager"}/>
+      <h3 class="text-[23px]">Dieler</h3>
+    </div>
+
+    <div id="topics" class="flex gap-20 leading-8 z-10">
+      <ul title="Legal">
+        <li class="font-bold">Servicios</li>
+        <li>
+          <ul class="text-[#ccc]">
+            <li>
+              <a href="/servicios/dieler-page" class="text-[#ccc] duration-300 hover:text-[#aaa]"
+                >Dieler Pages</a
+              >
+            </li>
+            <li>Dieler Solutions</li>
+            <li>Dieler Expansion</li>
+          </ul>
+        </li>
+      </ul>
+      <ul title="Legal" class="">
+        <li class="font-bold">Legal</li>
+        <li>
+          <ul class="text-[#ccc]">
+            <li>
+              <a
+                href="/politicas-y-condiciones"
+                class="text-[#ccc] duration-300 hover:text-[#aaa]"
+                >Politicas y condiciones</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul title="Legal">
+        <li class="font-bold">Recursos</li>
+        <li>
+          <ul class="text-[#ccc]">
+            <li>Blog</li>
+          </ul>
+        </li>
+      </ul>
+      <ul title="Legal">
+        <li class="font-bold">Soporte</li>
+        <li>
+          <ul class="text-[#ccc]">
+            <li>Contacto</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="absolute left-0 bottom-0">
+    <Image src={Ilustration} alt={""} loading={"eager"} />
+  </span>
+
+  <span class="absolute right-0 top-0 rotate-180">
+    <Image src={Ilustration} alt={""} loading={"eager"}/>
+  </span>
+</section>

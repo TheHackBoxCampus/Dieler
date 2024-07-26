@@ -1,0 +1,20 @@
+---
+import { buttonVariants } from "@/components/ui/shadcn/button";
+import { AccordionQuestions } from "@/components/ui/custom/AccordionQuestions";
+---
+
+<section class="flex max-w-6xl mx-auto my-28">
+  <div class="flex flex-col gap-4 items-start">
+    <h4 class="text-4xl w-[70%]">¿Tienes alguna pregunta?</h4>
+    <p class="text-[#ccc] w-[60%]">¿No encuentras lo que buscas?</p>
+    <p class="text-[#ccc] w-[60%]">
+      Si quieres saber algo mas, comunícate con nosotros y te ayudaremos con lo
+      que necesites.
+    </p>
+    <a href="/agendar" class={buttonVariants({variant: "outline", size: "lg"})}>¡Quiero resolver mis preguntas!</a>
+  </div>
+
+  <div class="flex flex-col gap-10">
+    <AccordionQuestions client:visible/>
+  </div>
+</section>

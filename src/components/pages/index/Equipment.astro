@@ -1,0 +1,19 @@
+---
+import { buttonVariants } from "@/components/ui/shadcn/button";
+import { CarouselEquipment } from "@/components/ui/custom/carouselEquipment";
+---
+
+<section class="flex max-w-6xl mx-auto my-20">
+  <div class="flex flex-col gap-4 items-start">
+    <h4 class="text-4xl w-[70%]">¿Quienes estan detras de esto?</h4>
+    <p class="text-[#ccc] w-[60%]">
+      Conoce el equipo, que transforma y brinda resultados
+    </p>
+    <a
+      href="/agendar"
+      class={buttonVariants({ variant: "outline", size: "lg" })}
+      >¡Quiere que ellos me ayudan!</a
+    >
+  </div>
+  <CarouselEquipment client:visible/>
+</section>

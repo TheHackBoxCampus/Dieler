@@ -1,0 +1,48 @@
+---
+// viewTransitions
+import { ViewTransitions } from "astro:transitions";
+
+// components
+import Footer from "@/components/pages/index/Footer.astro";
+import Nav from "@/components/pages/index/Nav.astro";
+import GoogleAnalythics from "@/lib/GoogleAnalythics.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+// css
+import "@/styles/index.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
+    <title>{title}</title>
+    <!-- VIEW TRANSITIONS -->
+    <ViewTransitions fallback="swap" />
+
+    <!-- Gppgle analithics -->
+    <GoogleAnalythics />
+
+  </head>
+  <body>
+    <header>
+      <Nav />
+      <slot name="hero" />
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>

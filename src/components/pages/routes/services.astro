@@ -1,0 +1,58 @@
+---
+// ui
+import Package from "@/components/ui/custom/Package.astro";
+---
+
+<section class="my-10">
+  <div class="flex flex-col items-center gap-4 mb-10">
+    <h3 class="text-4xl">
+      ¿Como te vamos <span class="text-[#FBB911]">ayudar?</span>
+    </h3>
+    <p class="text-[#ccc] w-[30%] text-center text-sm">
+      las 4 soluciones practicas que ayudaran a que aumentes la facturación en
+      tu negocio.
+    </p>
+  </div>
+
+  <div id="services" class="max-w-6xl mx-auto grid grid-cols-3 gap-10">
+    <Package
+      title="Dieler Pages"
+      special={false}
+      description="Te abrimos al mercado posicionando tu negocio en Google. "
+      button={{
+        text: "Quiero mas información",
+        link: "/servicios/dieler-page",
+      }}
+    />
+
+    <Package
+      title="Dieler Solutions"
+      special={false}
+      description="Analizamos tu caso, hacemos un diagnostico y te asignamos lo necesario para que puedas progresar."
+      button={{
+        text: "Quiero mas información",
+        link: "#",
+      }}
+    />
+
+    <Package
+      title="Dieler Expansion"
+      special={false}
+      description="Maximizamos tu alcance consiguiendo mejores captaciones y mas conversiones"
+      button={{
+        text: "Quiero mas información",
+        link: "#",
+      }}
+    />
+
+    <Package
+      title="Dieler Contents"
+      special={false}
+      description="Conectamos con tu audiencia y convertimos seguidores en clientes leales"
+      button={{
+        text: "Quiero mas información",
+        link: "#",
+      }}
+    />
+  </div>
+</section>

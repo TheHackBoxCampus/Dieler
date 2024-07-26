@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "¿Qué los diferencia de otras agencias del mercado?",
+      "answer": "lorem ipsum 1"
+    },
+    {
+      "id": 2,
+      "title": "¿Por qué deberia confiar en Dieler?",
+      "answer": "lorem ipsum 2"
+    },
+    {
+      "id": 3,
+      "title": "¿Los resultados que me garantizan cuando los voy a ver?",
+      "answer": "lorem ipsum 3"
+    }
+  ]
+}

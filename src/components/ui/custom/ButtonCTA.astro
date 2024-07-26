@@ -1,0 +1,29 @@
+---
+interface Props {
+  theme: "dark" | "light";
+  text: string;
+  link?: string;
+  type: "special" | "normal";
+}
+
+const { text, theme, link, type } = Astro.props;
+
+// css
+import "@/styles/ui/button.css";
+---
+
+<a
+  href={link}
+  class:list={[
+    theme == "dark"
+      ? `${type == "special" ? "text-[#F4A424] bg-[#2F2D18] py-4 px-10 cursor-pointer duration-300 hover:opacity-75 rounded-xl text-center text-xs mt-2 z-10" : "text-white py-4 px-10 mt-2 cursor-pointer duration-300 text-center text-sm z-10"} `
+      : "text-black bg-white py-2 px-3 cursor-pointer duration-300  text-center text-sm",
+    { [type]: true },
+  ]}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  {text}
+</a>

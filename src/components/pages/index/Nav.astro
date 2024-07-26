@@ -1,0 +1,34 @@
+---
+// ui
+import { Image } from "astro:assets";
+import { buttonVariants } from "@/components/ui/shadcn/button";
+
+// assets
+import Logo from "@/assets/images/logo.png";
+---
+
+<section class="w-full h-16">
+  <nav class="h-full flex justify-between items-center mx-20">
+    <div id="logo" class="flex items-center gap-2">
+      <Image src={Logo} alt={"Logo de la empresa dieler"} loading={"eager"}/>
+      <a href="/" class="text-[23px]">Dieler</a>
+    </div>
+
+    <div id="items" class="flex gap-10 items-center">
+      <a href="/" class="text-[#ccc] duration-300 hover:text-[#aaa]">Inicio</a>
+      <a href="/servicios" class="text-[#ccc] duration-300 hover:text-[#aaa]">Servicios</a>
+
+      <a
+        href="/agendar"
+        class={buttonVariants({ variant: "outline", size: "lg" })}
+      >
+        ¡Quiero reservar una reunión!
+      </a>
+    </div>
+  </nav>
+
+  <!-- border gradient -->
+  <hr
+    class="border-none w-full h-[1px] bg-gradient-to-l from-[#111] via-[#f0f0f0aa] to-[#111]"
+  />
+</section>

@@ -1,0 +1,43 @@
+---
+import Package from "@/components/ui/custom/Package.astro";
+---
+
+<section class="flex flex-col w-full items-center gap-4">
+  <h2 class="text-2xl">¡Contamos con lo mejor para ti!</h2>
+  <p class="text-[#ccc] w-[30%] text-center">
+    En dieler tenemos paquetes de crecimiento ideales para tu negocio,
+    soluciones practicas y estrategias efectivas
+  </p>
+
+  <div class="flex gap-12 mt-10">
+    <Package
+      special={false}
+      title="Dieler pages"
+      description="Te abrimos al mercado posicionando tu negocio en Google."
+      button={{
+        text: "¡Quiero posicionarme!",
+        link: "/servicios/dieler-page",
+      }}
+    />
+
+    <Package
+      title="Dieler Solutions"
+      special={true}
+      description="Analizamos tu caso, hacemos un diagnostico y te asignamos lo necesario para que puedas progresar."
+      button={{
+        text: "Busco algo mas personalizado",
+        link: "/servicios/dieler-page",
+      }}
+    />
+
+    <Package
+      title="Dieler Expansion"
+      special={false}
+      description="Maximizamos tu alcance consiguiendo mejores captaciones y mas conversiones"
+      button={{
+        text: "¡Quiero expandir mi negocio!",
+        link: "/servicios/dieler-page",
+      }}
+    />
+  </div>
+</section>

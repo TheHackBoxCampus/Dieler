@@ -1,0 +1,39 @@
+---
+import { buttonVariants } from "@/components/ui/shadcn/button";
+import { Image } from "astro:assets";
+
+// assets
+import Logo from "@/assets/images/logo.png";
+
+// ui
+import Ilustration from "@/assets/images/luz.png";
+---
+
+<section
+  class="max-w-6xl mx-auto h-[328px] [border-width:0.2px] rounded-2xl border-[#4c4b4b] my-32"
+>
+  <div class="relative h-full p-7 flex flex-col gap-5 items-start overflow-hidden">
+    <div class="flex items-center gap-3">
+      <Image src={Logo} alt={""} loading={"eager"} />
+      <h3 class="text-[23px]">Dieler</h3>
+    </div>
+    <h4 class="text-[43px]"><span class="text-[#FBB911]">Soluciones</span> tangibles</h4>
+    <p class="w-1/2 text-[#ccc]">
+      A diferencia de muchas agencias priorizamos el crecimiento de nuestros
+      clientes y no tratamos de venderte nada.
+    </p>
+    <a
+      href="/agendar"
+      class={`${buttonVariants({ variant: "outline", size: "lg" })} z-10`}
+    >
+      ¡Compruebalo!
+    </a>
+    <span class="absolute left-0 bottom-0">
+      <Image src={Ilustration} alt={""} loading={"eager"}/>
+    </span>
+
+    <span class="absolute right-0 top-0 rotate-180">
+      <Image src={Ilustration} alt={""} loading={"eager"}/>
+    </span>
+  </div>
+</section>
