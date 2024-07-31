@@ -1,5 +1,10 @@
 ---
 import Package from "@/components/ui/custom/Package.astro";
+
+// images
+import Pages from "@/assets/images/Dieler Pages.png"
+import Ads from "@/assets/images/Dieler Ads.png"
+import Solutions from "@/assets/images/Dieler Solutions.png"
 ---
 
 <section class="flex flex-col w-full items-center gap-4">
@@ -13,6 +18,7 @@ import Package from "@/components/ui/custom/Package.astro";
     <Package
       special={false}
       title="Dieler pages"
+      preview={Pages}
       description="Te abrimos al mercado posicionando tu negocio en Google."
       button={{
         text: "¡Quiero posicionarme!",
@@ -23,20 +29,22 @@ import Package from "@/components/ui/custom/Package.astro";
     <Package
       title="Dieler Solutions"
       special={true}
+      preview={Solutions}
       description="Analizamos tu caso, hacemos un diagnostico y te asignamos lo necesario para que puedas progresar."
       button={{
         text: "Busco algo mas personalizado",
-        link: "/servicios/dieler-page",
+        link: "/servicios/dieler-pages",
       }}
     />
 
     <Package
-      title="Dieler Expansion"
+      title="Dieler Ads"
+      preview={Ads}
       special={false}
       description="Maximizamos tu alcance consiguiendo mejores captaciones y mas conversiones"
       button={{
         text: "¡Quiero expandir mi negocio!",
-        link: "/servicios/dieler-page",
+        link: "/servicios/dieler-ads",
       }}
     />
   </div>

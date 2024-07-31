@@ -2,6 +2,11 @@
 import Button from "@/components/ui/custom/ButtonCTA.astro";
 import { SkeletonCard } from "@/components/ui/custom/skeletonContent";
 import { AccordionQuestionsPage } from "@/components/ui/custom/AccordionQuestionsPage";
+
+//images
+import Placeholder from "@/assets/images/example.png"
+import { Image } from "astro:assets"
+
 ---
 
 <section>
@@ -43,6 +48,16 @@ import { AccordionQuestionsPage } from "@/components/ui/custom/AccordionQuestion
         </p>
         <p>✨ Generas mas confianza y credibilidad</p>
       </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center my-20">
+    <h3 class="text-2xl text-center">Algunos resultados de utilizar esta valiosa herramienta!</h3>
+    
+    <div class="flex gap-5 justify-center mt-10">
+      <Image src={Placeholder} alt={""} />
+      <Image src={Placeholder} alt={""} />
+      <Image src={Placeholder} alt={""} />
     </div>
   </div>
 

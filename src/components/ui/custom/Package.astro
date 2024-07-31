@@ -22,10 +22,15 @@ import Placeholder from "@/assets/images/example.png";
 ---
 
 <div
-  class={`[border-width:0.2px] border-[#4c4b4b] rounded-xl h-[397px] w-[347px] max-w-[347px] max-h-[397px] flex flex-col items-center justify-center gap-2 ${special ? "scale-110" : ""}`}
+  class={`[border-width:0.2px] p-5 border-[#4c4b4b] rounded-xl h-[397px] w-[347px] max-w-[347px] max-h-[397px] flex flex-col items-center justify-around gap-2 ${special ? "scale-110" : ""}`}
 >
-  <Image src={Placeholder} alt={""} loading={`${special ? "eager" : "lazy"}`} />
-  <div class="my-2 mx-auto w-[80%] flex flex-col gap-2">
+  <Image
+    src={!preview ? Placeholder : preview}
+    class="rounded-xl"
+    alt={""}
+    loading={`${special ? "eager" : "lazy"}`}
+  />
+  <div class="my-2 flex flex-col gap-2">
     <span>{title}</span>
     <p class="text-xs text-[#ccc]">{description}</p>
     {
