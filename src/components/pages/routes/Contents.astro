@@ -12,10 +12,10 @@ import Rejuvenecer from "@/assets/images/rejuvenecer.png";
 import CamiloAcosta from "@/assets/images/camiloacosta.png";
 import OnFocus from "@/assets/images/onfocus.png";
 import Zaymi from "@/assets/images/zaymi-logo.png";
+import Stage from "@/assets/images/etapas_dmpe.png"
 
 // components
 import Results from "@/components/ui/custom/BannerResults.astro";
-import Steps from "@/components/ui/custom/Steps.astro";
 import { CarouselContentsCustomers } from "@/components/ui/custom/carouselContentsCustomers";
 import { buttonVariants } from "@/components/ui/shadcn/button";
 import Equipment from "../index/Equipment.astro";
@@ -78,37 +78,12 @@ import Equipment from "../index/Equipment.astro";
       Asi que desarrollamos una metodología para dar resultados, llamada
       <span class="text-[#FBB911]">DMPE</span>, consiste en 2 etapas
     </h3>
-  </div>
 
-  <Steps
-    steps={[
-      {
-        title: "Estructuracion",
-        description:
-          "En esta primera etapa establecemos todas las bases de tu marca, trabajamos en:",
-      },
-      {
-        title: "Ejecución ciclica",
-        description:
-          "En esta segunda etapa empezamos con las pruebas hasta encontrar el formato de contenido ganador de tu marca.",
-      },
-    ]}
-  >
-    <div slot="content" class="">
-      <div>
-        <span>Objetivos</span>
-      </div>
-      <div>
-        <span>Mi mensaje</span>
-      </div>
-      <div>
-        <span>Mi tribu</span>
-      </div>
-      <div>
-        <span>Mi yo ideal</span>
-      </div>
+    <div class="w-full flex justify-center my-10">
+      <Image src={Stage} alt={""}/>
+      
     </div>
-  </Steps>
+  </div>
 
   <div class="flex flex-col items-center gap-10 mb-20">
     <h3 class="text-[#FBB911] text-2xl text-center font-bold">
