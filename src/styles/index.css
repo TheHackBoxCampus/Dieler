@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("./variables.css");
+
 
 html {
   scroll-behavior: smooth;
@@ -7,13 +8,13 @@ html {
 body {
   background: #111;
   color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary)
 }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
   background: #111;
 }
 
-::-webkit-scrollbar-thumb { 
-  background: #222
+::-webkit-scrollbar-thumb {
+  background: #222;
 }

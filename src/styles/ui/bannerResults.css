@@ -1,0 +1,5 @@
+@import url("../variables.css"); 
+
+.mount { 
+    font-family: var( --font-secundary)
+}
