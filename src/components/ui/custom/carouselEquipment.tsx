@@ -8,17 +8,22 @@ import {
 
 export const CarouselEquipment = () => {
   return (
-    <Carousel className="w-[60%] max-h-64">
+    <Carousel className="flex w-1/2 max-h-72">
       <CarouselContent className="w-full h-full flex justify-start gap-5">
-        <CarouselItem className="flex items-center h-64 rounded-3xl justify-center">
-          <span className="text-3xl font-bold border border-white w-3/4 h-full text-center rounded-3xl leading-[250px]">
-            1
-          </span>
+        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
+          <img src="/src/assets/images/equipo/diego.png" className="w-full h-full" alt="" />
         </CarouselItem>
-        <CarouselItem className="flex items-center h-64 rounded-3xl justify-center">
-          <span className="text-3xl font-bold border border-white w-3/4 h-full text-center rounded-3xl leading-[250px]">
-            2
-          </span>
+        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
+          <img src="/src/assets/images/equipo/daniel.png" className="w-full h-full" alt="" />
+        </CarouselItem>
+        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
+          <img src="/src/assets/images/equipo/miller.png" className="w-full h-full" alt="" />
+        </CarouselItem>
+        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
+          <img src="/src/assets/images/equipo/sofia.png" className="w-full h-full" alt="" />
+        </CarouselItem>
+        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
+          <img src="/src/assets/images/equipo/mojica.png" className="w-full h-full" alt="" />
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious />

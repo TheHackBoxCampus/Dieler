@@ -4,23 +4,30 @@ import { SkeletonCard } from "@/components/ui/custom/skeletonContent";
 import { AccordionQuestionsPage } from "@/components/ui/custom/AccordionQuestionsPage";
 
 //images
-import Placeholder from "@/assets/images/example.png"
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
+import Beneficios from "@/assets/images/beneficios-page.png";
+import Explicacion from "@/assets/images/embudos-explicacion.png";
+import Explicacion_2 from "@/assets/images/embudos-explicacion_2.png";
+import Proceso from "@/assets/images/proceso-landing.png";
+import Diseños from "@/assets/images/diseños-pages.png";
 
+// components
+import Results from "@/components/ui/custom/BannerResults.astro";
+import { buttonVariants } from "@/components/ui/button";
 ---
 
 <section>
-  <div class="flex flex-col w-full items-center my-20 gap-20">
+  <div class="flex flex-col w-full items-center mt-20 gap-20">
     <h1 class="font-semibold text-4xl w-1/2 text-center">
-      La herramienta que esta consiguiendo que las empresas aumenten sus <span
-        class="text-[#FBB911]">cifras</span
-      >
+      Transforma tus visitas en Clientes con una <span class="text-[#FBB911]"
+        >Landing Page</span
+      > de Alto Impacto
     </h1>
     <div
       class="bg-[#111] w-[600px] h-[298px] border-white border-2 rounded-3xl text-center leading-[290px]"
       style="box-shadow: 0px 2px 30px 0px rgb(227, 176, 30);"
     >
-    Video de venta (VSL)
+      Video de venta (VSL)
     </div>
     <Button
       theme="dark"
@@ -30,42 +37,67 @@ import { Image } from "astro:assets"
     />
   </div>
 
-  <div class="my-20 flex flex-col w-full items-center gap-4">
-    <h3 class="text-2xl w-[30%] text-center">
-      ¿Que consigues si implementas este embudo de conversión?
-    </h3>
-    <div class="gap-10 mt-10 grid grid-cols-2">
-      <picture class="flex justify-end">
-        <SkeletonCard client:load />
-      </picture>
-
-      <div class="flex flex-col gap-5 justify-center">  
-        <p>✨ Posicionas tu marca y construyes una identidad</p>
-        <p>✨ Recibes prospectos más calificados</p>
-        <p class="w-3/5">
-          ✨ Es un recurso valioso que puede incrementar tu facturación
-          significativamente
-        </p>
-        <p>✨ Generas mas confianza y credibilidad</p>
-      </div>
-    </div>
+  <div class="flex flex-col w-full gap-4">
+    <Results
+      Mounts={[
+        {
+          mount: "200",
+          text: "LANDINGS PAGES CREADAS",
+        },
+        {
+          mount: "23",
+          text: "CLIENTES EN 4 PAISES DIFERENTES",
+        },
+        {
+          mount: "34",
+          text: "NICHOS DIFERENTES TRABAJADOS",
+        },
+      ]}
+    />
   </div>
 
-  <div class="flex flex-col items-center my-20">
-    <h3 class="text-2xl text-center">Algunos resultados de utilizar esta valiosa herramienta!</h3>
-    
-    <div class="flex gap-5 justify-center mt-10">
-      <Image src={Placeholder} alt={""} />
-      <Image src={Placeholder} alt={""} />
-      <Image src={Placeholder} alt={""} />
-    </div>
+  <div class="flex flex-col items-center mb-20">
+    <h3 class="text-2xl text-center mb-10">¿Qué Consigues?</h3>
+
+    <Image src={Beneficios} alt={""} />
+
+    <p class="text-center w-2/3 mt-10">
+      Después de tantos aprendizajes, contamos con un portafolio de recursos
+      probados, listos para ser utilizados en tu negocio, no más paginas llenas
+      de información que lo unico que hacen es ruido mental, si queremos
+      aumentar más nuestra conversación, hagamos nuestro camino a la venta más
+      atractivo y más facil.
+    </p>
   </div>
 
-  <div class="flex flex-col items-center my-20">
-    <h3 class="text-2xl text-center">
-      ¿No te convece? ¡Obtén Respuestas Rápidas y Claras!
+  <div class="flex flex-col gap-10 items-center mb-20">
+    <h3 class="text-2xl text-center mb-10">
+      Un ejemplo <span class="text-[#FBB911]">Claro</span> y Real (Embudo de ventas)
     </h3>
 
-    <AccordionQuestionsPage client:visible />
+    <Image src={Explicacion} alt={""} />
+    <Image src={Explicacion_2} alt={""} />
+  </div>
+
+  <div class="flex flex-col mb-20 items-center">
+    <h3 class="text-2xl text-center mb-10">Nuestra forma de trabajar</h3>
+    <Image src={Proceso} alt={""} />
+  </div>
+
+  <div class="flex flex-col mb-20 items-center">
+    <h3 class="text-2xl text-center mb-10">
+      Algunos diseños que hemos realizado
+    </h3>
+    <Image src={Diseños} alt={""} />
+  </div>
+
+  <div class="flex flex-col items-center justify-center mb-20">
+    <h3 class="text-2xl text-center mb-10">¿Listo para comenzar? ¡HABLEMOS!</h3>
+    <a
+      href="#"
+      class={`${buttonVariants({ variant: "outline", size: "lg" })} z-10 text-center`}
+    >
+      Conoce nuestro portafolio
+    </a>
   </div>
 </section>
