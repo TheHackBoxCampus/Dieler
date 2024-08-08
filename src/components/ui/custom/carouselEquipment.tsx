@@ -8,7 +8,7 @@ import {
 
 export const CarouselEquipment = () => {
   return (
-    <Carousel className="flex w-1/2 max-h-72">
+    <Carousel className="flex w-1/2 max-h-auto">
       <CarouselContent className="w-full h-full flex justify-start gap-5">
         <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
           <img src="/src/assets/images/equipo/diego.png" className="w-full h-full" alt="" />
