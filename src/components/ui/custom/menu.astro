@@ -1,0 +1,135 @@
+---
+interface Props {
+  Image: any;
+}
+
+const { Image } = Astro.props;
+
+// components
+
+import { buttonVariants } from "@/components/ui/shadcn/button";
+
+// images
+import Logo from "@/assets/images/logo.png";
+
+// icon
+import Burger from "@/assets/icons/menu.svg";
+import Close from "@/assets/icons/close.svg";
+---
+
+<section class="xxs:visible lg:hidden w-full h-16">
+  <nav class="h-full flex justify-between items-center xxs:mx-10 sm:mx-20">
+    <div id="logo" class="flex items-center gap-2">
+      <Image src={Logo} alt={"Logo de la empresa dieler"} loading={"eager"} />
+      <a href="/" class="text-[23px]">Dieler</a>
+    </div>
+    <div id="menu-icon">
+      <Image
+        src={Burger}
+        alt={"Icono para el menu de dispositivos moviles"}
+        loading={"eager"}
+      />
+    </div>
+  </nav>
+
+  <!-- border gradient -->
+  <hr
+    class="border-none w-full h-[1px] bg-gradient-to-l from-[#111] via-[#f0f0f0aa] to-[#111]"
+  />
+</section>
+<!-- -------------------------------------------------------------------------->
+<div
+  id="menu-responsive"
+  class="fixed xxs:hidden md:hidden top-0 w-full h-full bg-[rgba(0,0,0,0.6)] z-10"
+>
+</div>
+
+<!-- -------------------------------------------------------------------------->
+
+<div
+  class="xxs:hidden md:hidden z-30 top-0 fixed xs:w-[70%] sm:w-[40%] right-0 h-full bg-[#111] text-white"
+  id="menu-container"
+>
+  <div class="w-full p-5 flex justify-end">
+    <Image id="close-icon" class="w-[30px] cursor-pointer" src={Close} alt="" />
+  </div>
+  <div id="items" class="flex flex-col gap-10 items-center mt-5">
+    <a
+      href="/"
+      class="text-[#ccc] duration-300 hover:text-[#aaa]"
+      onclick="(event) => event.preventDefault(); window.location.href=this.href;"
+      >Inicio</a
+    >
+    <a
+      href="/servicios"
+      class="text-[#ccc] duration-300 hover:text-[#aaa]"
+      onclick="(event) => event.preventDefault(); window.location.href=this.href;"
+      >Servicios</a
+    >
+    <a href="/blog" class="text-[#ccc] duration-300 hover:text-[#aaa]">Blog</a>
+    <a
+      href="/agendar"
+      class={buttonVariants({ variant: "outline", size: "lg" })}
+      onclick="(event) => event.preventDefault(); window.location.href=this.href;"
+    >
+      ¡Quiero reservar una reunión!
+    </a>
+  </div>
+</div>
+
+<style>
+  #menu-responsive {
+    transition: 300ms ease;
+  }
+
+  @keyframes open {
+    to {
+      transform: translateX(100%);
+    }
+
+    from {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes close {
+    to {
+      transform: translateX(0);
+    }
+
+    from {
+      transform: translateX(100%);
+    }
+  }
+</style>
+
+<script>
+  const menu: Element | null = document.querySelector("#menu-icon");
+  const menu_container: HTMLElement | null =
+    document.querySelector("#menu-responsive");
+  const menu_container_elements: HTMLElement | null =
+    document.querySelector("#menu-container");
+  const close: HTMLImageElement | null = document.querySelector("#close-icon");
+
+  const init = () => {
+    const openMenu = () => {
+      if (menu_container && menu_container_elements) {
+        menu_container.style.display = "block";
+        menu_container_elements.style.display = "block";
+        menu_container_elements.style.animation = "open 800ms forwards reverse";
+      }
+    };
+
+    const closeMenu = () => {
+      if (menu_container && menu_container_elements) {
+        menu_container_elements.style.animation =
+          "close 800ms forwards reverse";
+        menu_container.style.display = "none";
+      }
+    };
+    menu?.addEventListener("click", openMenu);
+    close?.addEventListener("click", closeMenu);
+  };
+
+  document.addEventListener("DOMContentLoaded", init);
+</script>

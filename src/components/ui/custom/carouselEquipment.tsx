@@ -1,3 +1,6 @@
+// import useEmblaCarousel from "embla-carousel-react";
+// import Autoplay from "embla-carousel-autoplay";
+
 import {
   Carousel,
   CarouselContent,
@@ -6,25 +9,26 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export const CarouselEquipment = () => {
+// const pluggin = () => {
+//   const [ eblaRef ] = useEmblaCarousel({ loop: true }, [Autoplay()])
+// };
+
+export const CarouselEquipment = ({
+  persons,
+}: {
+  persons: Array<ImageMetadata>;
+}) => {
   return (
-    <Carousel className="flex w-1/2 max-h-auto">
-      <CarouselContent className="w-full h-full flex justify-start gap-5">
-        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
-          <img src="/src/assets/images/equipo/diego.png" className="w-full h-full" alt="" />
-        </CarouselItem>
-        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
-          <img src="/src/assets/images/equipo/daniel.png" className="w-full h-full" alt="" />
-        </CarouselItem>
-        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
-          <img src="/src/assets/images/equipo/miller.png" className="w-full h-full" alt="" />
-        </CarouselItem>
-        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
-          <img src="/src/assets/images/equipo/sofia.png" className="w-full h-full" alt="" />
-        </CarouselItem>
-        <CarouselItem className="flex w-2/3 h-auto rounded-3xl justify-center">
-          <img src="/src/assets/images/equipo/mojica.png" className="w-full h-full" alt="" />
-        </CarouselItem>
+    <Carousel className="flex xxs:w-[95%] sm:w-4/5 xl:w-1/2 max-h-auto">
+      <CarouselContent className="w-full h-full gap-5">
+        {persons.map((person, index) => (
+          <CarouselItem
+            key={index}
+            className="flex w-full h-max rounded-3xl m-auto flex-col items-center"
+          >
+            <img src={person.src} className="w-full h-full ms-5" />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

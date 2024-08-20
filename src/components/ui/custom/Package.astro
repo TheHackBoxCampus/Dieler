@@ -22,7 +22,7 @@ import Placeholder from "@/assets/images/example.png";
 ---
 
 <div
-  class={`[border-width:0.2px] p-5 border-[#4c4b4b] rounded-xl h-[397px] w-[347px] max-w-[347px] max-h-[397px] flex flex-col items-center justify-around gap-2 ${special ? "scale-110" : ""}`}
+  class={`[border-width:0.2px] p-5 border-[#4c4b4b] rounded-xl xxs:max-w-xs xs:max-w-[350px] xxs:max-h-max sm:h-[397px] sm:w-[347px] sm:max-w-[347px] sm:max-h-[397px] flex flex-col items-center justify-around gap-2 mx-auto xs:scale-100 md:scale-110 xl:scale-100 ${special ? "xxs:scale-100 xl:scale-110 " : ""}`}
 >
   <Image
     src={!preview ? Placeholder : preview}
@@ -45,6 +45,7 @@ import Placeholder from "@/assets/images/example.png";
         <a
           href={button.link}
           class={buttonVariants({ variant: "outline", size: "lg" })}
+          onclick="event.preventDefault(); window.location.href=this.href;"
         >
           {button.text}
         </a>
