@@ -46,6 +46,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      screens: { 
+        xxs:"10px",
+        xs: "350px"
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
