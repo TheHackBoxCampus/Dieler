@@ -1,14 +1,19 @@
 ---
-// ui
+// componets
 import { Image } from "astro:assets";
 import { buttonVariants } from "@/components/ui/shadcn/button";
 
 // assets
 import Logo from "@/assets/images/logo.png";
+
+// components
+import Menu from "@/components/ui/custom/menu.astro";
 ---
 
-<section class="w-full h-16">
-  <nav class="h-full flex justify-between items-center mx-20">
+<Menu Image={Image}/>
+
+<section class="xxs:hidden lg:block w-full h-16">
+  <nav class="h-full flex justify-between items-center xxs:mx-10 sm:mx-20">
     <div id="logo" class="flex items-center gap-2">
       <Image src={Logo} alt={"Logo de la empresa dieler"} loading={"eager"}/>
       <a href="/" class="text-[23px]">Dieler</a>
@@ -21,6 +26,7 @@ import Logo from "@/assets/images/logo.png";
       <a
         href="/agendar"
         class={buttonVariants({ variant: "outline", size: "lg" })}
+        onclick="(event) => event.preventDefault(); window.location.href=this.href;"
       >
         ¡Quiero reservar una reunión!
       </a>

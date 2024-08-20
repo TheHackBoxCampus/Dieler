@@ -5,34 +5,44 @@ import { Image } from "astro:assets";
 import Latinos from "@/assets/images/latinos-logo.png";
 import Margarita from "@/assets/images/Margarita-logo.png";
 import Santhonet from "@/assets/images/santhonet.png";
-import LatinoExpress from "@/assets/images/licencias-express.png"
-import Senaida from "@/assets/images/senaida.png"
-import Rejuvenecer from "@/assets/images/rejuvenecer.png"
-import CamiloAcosta from "@/assets/images/camiloacosta.png"
-import OnFocus from "@/assets/images/onfocus.png"
-import NeidaNails from "@/assets/images/neida_nails.png"
+import LatinoExpress from "@/assets/images/licencias-express.png";
+import Senaida from "@/assets/images/senaida.png";
+import Rejuvenecer from "@/assets/images/rejuvenecer.png";
+import CamiloAcosta from "@/assets/images/camiloacosta.png";
+import OnFocus from "@/assets/images/onfocus.png";
+import NeidaNails from "@/assets/images/neida_nails.png";
 import Zaymi from "@/assets/images/zaymi-logo.png";
 import Terraza from "@/assets/images/terraza-logo.png";
+
+// components
+import { CarouselBrands } from "@/components/ui/custom/carouselBrands";
+
+const brands = [
+  Latinos,
+  Margarita,
+  Santhonet,
+  LatinoExpress,
+  Senaida,
+  Rejuvenecer,
+  CamiloAcosta,
+  OnFocus,
+  NeidaNails,
+  Zaymi,
+  Terraza,
+];
 ---
 
-<section class="w-full flex flex-col items-center my-24">
-  <span
-    class="text-[#ccc] w-[30%] text-center"
+<section class="w-full flex flex-col gap-10 items-center my-24">
+  <span class="text-[#ccc] xs:w-4/5 lg:w-2/5 text-center"
     >Estas son algunas de las personas a quienes hemos ayudado, sin publicidad
-    engañosa y con resultados reales
+    engañosa y con resulctados reales
   </span>
 
-  <div class="flex flex-wrap h-auto w-3/4 gap-2 items-center justify-center">
-      <Image src={Zaymi} alt={""} />
-      <Image src={Terraza} alt={""} />
-      <Image src={Margarita} alt={""} />
-      <Image src={Latinos} alt={""} />
-      <Image src={Santhonet} alt={""} />
-      <Image src={LatinoExpress} alt={""} />
-      <Image src={Senaida} alt={""} />
-      <Image src={Rejuvenecer} alt={""} />
-      <Image src={CamiloAcosta} alt={""} />
-      <Image src={OnFocus} alt={""} />
-      <Image src={NeidaNails} alt={""} />
+  <div
+    class="xxs:hidden md:flex flex-wrap h-auto md:w-11/12 lg:w-2/3 gap-2 items-center justify-center"
+  >
+    {brands.map((brand) => <Image src={brand} alt={""} />)}
   </div>
+
+  <CarouselBrands brands={brands} client:visible />
 </section>

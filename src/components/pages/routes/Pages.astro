@@ -1,8 +1,4 @@
 ---
-import Button from "@/components/ui/custom/ButtonCTA.astro";
-import { SkeletonCard } from "@/components/ui/custom/skeletonContent";
-import { AccordionQuestionsPage } from "@/components/ui/custom/AccordionQuestionsPage";
-
 //images
 import { Image } from "astro:assets";
 import Beneficios from "@/assets/images/beneficios-page.png";
@@ -13,18 +9,19 @@ import Diseños from "@/assets/images/diseños-pages.png";
 
 // components
 import Results from "@/components/ui/custom/BannerResults.astro";
-import { buttonVariants } from "@/components/ui/button";
+import Button from "@/components/ui/custom/ButtonCTA.astro";
+import { buttonVariants } from "@/components/ui/shadcn/button";
 ---
 
 <section>
-  <div class="flex flex-col w-full items-center mt-20 gap-20">
-    <h1 class="font-semibold text-4xl w-1/2 text-center">
+  <div class="flex flex-col w-full items-center xxs:my-16 sm:my-20 xxs:gap-10 md:gap-14 lg:gap-20">
+    <h1 class="font-semibold xxs:text-[22px] sm:text-3xl md:text-4xl xxs:w-4/5 md:w-3/4 lg:w-1/2 2xl:w-[25%] text-center">
       Transforma tus visitas en Clientes con una <span class="text-[#FBB911]"
         >Landing Page</span
       > de Alto Impacto
     </h1>
     <div
-      class="bg-[#111] w-[600px] h-[298px] border-white border-2 rounded-3xl text-center leading-[290px]"
+      class="bg-[#111] xxs:w-4/5 sm:w-[600px] h-[298px] border-white border-2 rounded-3xl text-center leading-[290px]"
       style="box-shadow: 0px 2px 30px 0px rgb(227, 176, 30);"
     >
       Video de venta (VSL)
@@ -59,9 +56,9 @@ import { buttonVariants } from "@/components/ui/button";
   <div class="flex flex-col items-center mb-20">
     <h3 class="text-2xl text-center mb-10">¿Qué Consigues?</h3>
 
-    <Image src={Beneficios} alt={""} />
+    <Image class="xxs:w-full object-cover md:w-4/5 lg:w-1/2 2xl:w-2/5" src={Beneficios} alt={""} />
 
-    <p class="text-center w-2/3 mt-10">
+    <p class="text-center xxs:w-11/12 sm:w-3/5 xl:w-1/2 mt-10 xxs:text-sm md:text-md">
       Después de tantos aprendizajes, contamos con un portafolio de recursos
       probados, listos para ser utilizados en tu negocio, no más paginas llenas
       de información que lo unico que hacen es ruido mental, si queremos
@@ -71,31 +68,31 @@ import { buttonVariants } from "@/components/ui/button";
   </div>
 
   <div class="flex flex-col gap-10 items-center mb-20">
-    <h3 class="text-2xl text-center mb-10">
+    <h3 class="font-semibold xxs:text-[22px] xxs:w-4/5 md:w-3/4 lg:w-1/2 2xl:w-[25%] text-center mb-10">
       Un ejemplo <span class="text-[#FBB911]">Claro</span> y Real (Embudo de ventas)
     </h3>
 
-    <Image src={Explicacion} alt={""} />
-    <Image src={Explicacion_2} alt={""} />
+    <Image class="xxs:w-full object-cover md:w-4/5 lg:w-1/2" src={Explicacion} alt={""} />
+    <Image class="xxs:w-full object-cover md:w-4/5 lg:w-1/2" src={Explicacion_2} alt={""} />
   </div>
 
   <div class="flex flex-col mb-20 items-center">
-    <h3 class="text-2xl text-center mb-10">Nuestra forma de trabajar</h3>
-    <Image src={Proceso} alt={""} />
+    <h3 class="font-semibold xxs:text-[22px] xxs:w-4/5 md:w-3/4 lg:w-1/2 2xl:w-[25%] text-center mb-10">Nuestra forma de trabajar</h3>
+    <Image class="xxs:w-full object-cover md:w-4/5 lg:w-1/2" src={Proceso} alt={""} />
   </div>
 
   <div class="flex flex-col mb-20 items-center">
-    <h3 class="text-2xl text-center mb-10">
+    <h3 class="font-semibold xxs:text-[22px] xxs:w-4/5 md:w-3/4 lg:w-1/2 2xl:w-[25%] text-center mb-10">
       Algunos diseños que hemos realizado
     </h3>
-    <Image src={Diseños} alt={""} />
+    <Image class="xxs:w-full object-cover md:w-4/5 lg:w-1/2" src={Diseños} alt={""} />
   </div>
 
   <div class="flex flex-col items-center justify-center mb-20">
-    <h3 class="text-2xl text-center mb-10">¿Listo para comenzar? ¡HABLEMOS!</h3>
+    <h3 class="font-semibold xxs:text-[22px] xxs:w-4/5 md:w-3/4 lg:w-1/2 2xl:w-[25%] text-center mb-10">¿Listo para comenzar? <span class="text-[#FBB911]">¡HABLEMOS!</span></h3>
     <a
       href="#"
-      class={`${buttonVariants({ variant: "outline", size: "lg" })} z-10 text-center`}
+      class={`${buttonVariants({ variant: "outline", size: "xl" })} z-10 text-center`}
     >
       Conoce nuestro portafolio
     </a>

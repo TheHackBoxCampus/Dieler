@@ -1,19 +1,35 @@
 ---
 import { buttonVariants } from "@/components/ui/shadcn/button";
 import { CarouselEquipment } from "@/components/ui/custom/carouselEquipment";
+
+// images
+
+import Diego from "@/assets/images/equipo/diego.png";
+import Daniel from "@/assets/images/equipo/daniel.png";
+import Miller from "@/assets/images/equipo/miller.png";
+import Sofia from "@/assets/images/equipo/sofia.png";
+import Mojica from "@/assets/images/equipo/mojica.png";
+
+const persons = [Diego, Daniel, Miller, Sofia, Mojica];
 ---
 
-<section class="flex max-w-6xl mx-auto my-20">
-  <div class="flex flex-col gap-4 items-start justify-center">
-    <h4 class="text-4xl w-[70%]">¿Quienes estan detras de esto?</h4>
-    <p class="text-[#ccc] w-[60%]">
+<section
+  class="flex xxs:gap-10 xl:gap-0 xxs:items-center xxs:flex-col xl:flex-row xl:items-start max-w-6xl mx-auto my-20"
+>
+  <div
+    class="flex flex-col gap-4 items-start justify-center xxs:w-4/5 xl:w-1/2"
+  >
+    <h4 class="xxs:text-xl sm:text-2xl lg:text-4xl xxs:w-auto xl:w-[70%]">
+      ¿Quienes estan detras de esto?
+    </h4>
+    <p class="text-[#ccc] xxs:w-auto xl:w-[60%]">
       Conoce el equipo, que transforma y brinda resultados
     </p>
     <a
       href="/agendar"
       class={buttonVariants({ variant: "outline", size: "lg" })}
-      >¡Quiero que ellos me ayudan!</a
+      >¡Quiero que ellos me ayuden!</a
     >
   </div>
-  <CarouselEquipment client:visible/>
+  <CarouselEquipment persons={persons} client:visible />
 </section>

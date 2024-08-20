@@ -12,16 +12,16 @@ import Contents from "@/assets/images/Dieler Contents.png"
 
 <section class="my-10">
   <div class="flex flex-col items-center gap-4 mb-10">
-    <h3 class="text-4xl">
+    <h3 class="xxs:text-[22px] sm:text-3xl md:text-4xl">
       ¿Como te vamos <span class="text-[#FBB911]">ayudar?</span>
     </h3>
-    <p class="text-[#ccc] w-[30%] text-center text-sm">
+    <p class="text-[#ccc] xxs:text-md sm-text-lg xxs:w-11/12 sm:w-2/5 xl:w-1/2 text-center">
       las 4 soluciones practicas que ayudaran a que aumentes la facturación en
       tu negocio.
     </p>
   </div>
 
-  <div id="services" class="max-w-6xl mx-auto grid grid-cols-3 gap-10">
+  <div id="services" class="md:max-w-4xl xl:max-w-6xl md:grid-cols-2 md:items-center mx-auto grid xl:grid-cols-3 gap-14">
     <Package
       title="Dieler Pages"
       preview={Pages}
@@ -40,7 +40,7 @@ import Contents from "@/assets/images/Dieler Contents.png"
       description="Analizamos tu caso, hacemos un diagnostico y te asignamos lo necesario para que puedas progresar."
       button={{
         text: "Quiero mas información",
-        link: "#",
+        link: "/servicios/dieler-solutions",
       }}
     />
 

@@ -7,9 +7,11 @@ import Logo from "@/assets/images/logo.png";
 ---
 
 <section
-  class="relative rounded-t-3xl border-t border-[#FBF7FB] border-opacity-20 h-[250px] overflow-hidden"
+  class="relative rounded-t-3xl border-t border-[#FBF7FB] border-opacity-20 xxs:h-auto lg:h-[250px] overflow-hidden"
 >
-  <div class="w-[70%] mx-auto my-16 flex justify-between">
+  <div
+    class="w-[70%] mx-auto my-16 flex xxs:flex-col xxs:gap-10 lg:gap-0 lg:flex-row justify-between"
+  >
     <div id="logo" class="flex items-start gap-2">
       <Image
         src={Logo}
@@ -20,8 +22,11 @@ import Logo from "@/assets/images/logo.png";
       <h3 class="text-[23px]">Dieler</h3>
     </div>
 
-    <div id="topics" class="flex gap-20 leading-8 z-10">
-      <ul title="Legal">
+    <div
+      id="topics"
+      class="flex xxs:flex-col md:flex-row xxs:gap-10 lg:gap-14 xl:gap-20 leading-8 z-10"
+    >
+      <ul title="Servicios">
         <li class="font-bold">Servicios</li>
         <li>
           <ul class="text-[#ccc]">
@@ -29,15 +34,30 @@ import Logo from "@/assets/images/logo.png";
               <a
                 href="/servicios/dieler-page"
                 class="text-[#ccc] duration-300 hover:text-[#aaa]"
+                onclick="(event) => event.preventDefault(); window.location.href=this.href;"
                 >Dieler Pages</a
               >
             </li>
-            <li>Dieler Solutions</li>
-            <li>Dieler Expansion</li>
+            <li>
+              <a
+                href="/servicios/dieler-solutions"
+                class="text-[#ccc] duration-300 hover:text-[#aaa]"
+                onclick="(event) => event.preventDefault(); window.location.href=this.href;"
+                >Dieler Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                href="/servicios/dieler-ads"
+                class="text-[#ccc] duration-300 hover:text-[#aaa]"
+                onclick="(event) => event.preventDefault(); window.location.href=this.href;"
+                >Dieler Ads</a
+              >
+            </li>
           </ul>
         </li>
       </ul>
-      <ul title="Legal" class="">
+      <ul title="Legal">
         <li class="font-bold">Legal</li>
         <li>
           <ul class="text-[#ccc]">
@@ -45,25 +65,28 @@ import Logo from "@/assets/images/logo.png";
               <a
                 href="/politicas-y-condiciones"
                 class="text-[#ccc] duration-300 hover:text-[#aaa]"
+                onclick="(event) => event.preventDefault(); window.location.href=this.href;"
                 >Politicas y condiciones</a
               >
             </li>
           </ul>
         </li>
       </ul>
-      <ul title="Legal">
+      <ul title="Recursos">
         <li class="font-bold">Recursos</li>
         <li>
           <ul class="text-[#ccc]">
             <li>
-              <a href="/blog" class="text-[#ccc] duration-300 hover:text-[#aaa]"
-                >Blog</a
+              <a
+                href="/blog"
+                class="text-[#ccc] duration-300 hover:text-[#aaa]" 
+               >Blog</a
               >
             </li>
           </ul>
         </li>
       </ul>
-      <ul title="Legal">
+      <ul title="Soporte">
         <li class="font-bold">Soporte</li>
         <li>
           <ul class="text-[#ccc]">
